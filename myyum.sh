@@ -33,4 +33,4 @@ do
 done
 cd ../
 # 一時ディレクトリを削除
-rm -Rf ${tmp}
+rm -Rf $(ls -l | grep $(whoami) | grep tmp | awk '{print $NF}')
