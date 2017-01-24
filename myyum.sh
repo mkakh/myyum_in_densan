@@ -9,6 +9,8 @@ install_dir=~/myapp
 if [ ! -e ${install_dir} ] ; then
   mkdir ${install_dir}
   echo "setenv PATH $PATH:${install_dir}/usr/bin:${install_dir}/usr/local/bin" >> ~/.tcshrc
+  mkdir -p ${install_dir}/usr/bin
+  cp -a ./myyum.sh ${install_dir}/usr/bin/myyum
 fi
 
 # 一時ディレクトリ作成
