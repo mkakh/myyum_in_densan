@@ -14,14 +14,13 @@ if [ ! -e ${install_dir} ] ; then
 fi
 
 # 一時ディレクトリ作成
-tmp=$(mktemp -d)
-cd ${tmp}
+cd $(mktemp -d)
 
 # yumにてrpmを取得
 yumdownloader --resolve $1
 
 # rpmの中身を取得
-for filepath in "./*.rpm"
+for filepath in *.rpm
 do
     rpm2cpio ${filepath} | cpio -ivd
 done
