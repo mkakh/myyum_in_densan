@@ -2,7 +2,9 @@
 
 # 引数確認＆エラー処理設定
 set -eu
-: $1
+if [ $# -ne 1 ]; then
+	echo "Usage: $0 [target]"
+fi
 
 # インストール先ディレクトリ作成等
 install_dir=~/myapp
