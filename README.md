@@ -4,7 +4,7 @@
 
 ※ライブラリを使用したり実行に権限が必要なものなど対応してないものも多いです。
 
-##Usage:
+## Usage:
 
 ### 初回
 1. `git clone https://github.com/mkakh/myyum_in_densan && cd myyum_in_densan`
